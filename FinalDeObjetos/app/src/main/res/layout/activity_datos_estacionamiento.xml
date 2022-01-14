@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DatosEstacionamiento">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/tvTitulo"
+        android:text="              Ingresar datos de destino"
+        android:textAlignment="center"
+        android:textSize="20sp">
+    </TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etDestinoPrinciapl"
+        android:layout_below="@+id/tvTitulo"
+        android:hint="Destino Principal"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etEntre1"
+        android:layout_below="@id/etDestinoPrinciapl"
+        android:hint="Calle entre 1"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etEntre2"
+        android:layout_below="@+id/etEntre1"
+        android:hint="Calle entre 2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ln"
+        android:orientation="horizontal"
+        android:layout_below="@id/etEntre2">
+
+    <Button
+        android:id="@+id/IdButtonDatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Buscar"
+        android:layout_below="@id/etEntre2" />
+
+
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvResultado"
+        android:layout_below="@id/ln"
+        android:layout_alignStart="@id/ln"
+        tools:ignore="NotSibling">
+    </ListView>
+
+</RelativeLayout>
